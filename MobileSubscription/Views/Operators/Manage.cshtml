@@ -1,0 +1,74 @@
+﻿@using MobileSubscription.Models.ViewModels
+@model OperatorsManagementViewModel
+
+@{ ViewBag.Title = "Manage Operators"; }
+
+<h3>Operators Management</h3>
+<br />
+
+@if ((Model != null) && ((Model.CountryOperatorses != null) && Model.CountryOperatorses.Any()))
+{
+    <div class="form-inline">
+        <div class="form-group">
+            <label for="columnNames">Filter</label>
+            <select id="columnNames" class="form-control">
+                <option value="1">Country Id</option>
+                <option value="2" selected>Country Name</option>
+                <option value="3">Operator Id</option>
+                <option value="4">Operator Name</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="filterKeyword">by</label>
+            <input type="text" class="form-control" id="filterKeywords" placeholder="value">
+        </div>
+        <button id="goBtn" type="button" class="btn btn-success">Go</button>
+        <button id="resetBtn" type="button" class="btn btn-info">Reset</button>
+    </div>
+    <br />
+    
+    <table id="operatorsTable" class="table">
+        <thead>
+            <tr>
+                <th class="sortable">Country Id&nbsp;&nbsp;<i class="fa fa-sort" aria-hidden="true"></i></th>
+                <th class="sortable">Country Name&nbsp;&nbsp;<i class="fa fa-sort" aria-hidden="true"></i></th>
+                <th class="sortable">Operator Id&nbsp;&nbsp;<i class="fa fa-sort" aria-hidden="true"></i></th>
+                <th class="sortable">Operator Name&nbsp;&nbsp;<i class="fa fa-sort" aria-hidden="true"></i></th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="4">&nbsp;</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            @for (var i = 0; i < Model.CountryOperatorses.Count(); i++)
+            {
+                var item = Model.CountryOperatorses[i];
+
+                foreach (var op in item.Operators)
+                {                    
+                    <tr>
+                        <td>@item.Country.Id.ToString()</td>
+                        <td>@item.Country.Name</td>
+                        <td>@op.Id.ToString()</td>
+                        <td>@op.Name</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+}
+
+@section scripts {
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            $("#goBtn").on("click", Common.prototype.filterTable);
+            $("#resetBtn").on("click", Common.prototype.resetTable);
+        });
+
+    </script>
+}

@@ -1,0 +1,36 @@
+﻿@using MobileSubscription.Models.ViewModels
+@model AddOperatorViewModel
+
+@{ ViewBag.Title = "Add Operators"; }
+
+<h3>Add New Operators</h3>
+<br />
+
+@if ((Model != null) && ((Model.Countries != null) && Model.Countries.Any()))
+{    
+    <form class="form-horizontal">
+        <div class="form-group">
+            @Html.LabelFor(m => m.CountryId, new { @class = "col-sm-2 control-label" })
+            <div class="col-sm-5">
+                @Html.DropDownListFor(m => m.CountryId, Model.Countries, "Please select...", new { @class = "form-control" })
+            </div>
+            <div class="col-sm-5">
+                @Html.ValidationMessageFor(m => m.CountryId)
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.NewOperatorName, new { @class = "col-sm-2 control-label" })
+            <div class="col-sm-5">
+                @Html.EditorFor(m => m.NewOperatorName, new { htmlAttributes = new { @class="form-control" } })
+            </div>
+            <div class="col-sm-5">
+                @Html.ValidationMessageFor(m => m.NewOperatorName)
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button id="saveBtn" type="submit" class="btn btn-success">Save</button>
+            </div>
+        </div>
+    </form>
+}

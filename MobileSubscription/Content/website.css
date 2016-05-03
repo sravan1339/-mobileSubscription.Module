@@ -1,0 +1,127 @@
+﻿
+.navbar-brand
+{
+    height: auto;
+}
+
+.navbar-inverse .navbar-brand
+{
+    color: #fff;
+}
+
+    .navbar-inverse .navbar-brand:hover,
+    .navbar-inverse .navbar-brand:focus
+    {
+        color: #9d9d9d;
+        background-color: transparent;
+    }
+
+.body-content
+{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.table th,
+.table tfoot tr td
+{
+    background: #333333;
+    color: white;
+    font-weight: bold;
+}
+
+.table thead tr th:first-child
+{
+    -moz-border-radius: 9px 0 0 0;
+    -webkit-border-radius: 9px 0 0 0;
+    border-radius: 9px 0 0 0;
+}
+
+.table thead tr th:last-child
+{
+    -moz-border-radius: 0 9px 0 0;
+    -webkit-border-radius: 0 9px 0 0;
+    border-radius: 0 9px 0 0;
+}
+
+.table tfoot tr td:first-child
+{
+    -moz-border-radius: 0 0 0 9px;
+    -webkit-border-radius: 0 0 0 9px;
+    border-radius: 0 0 0 9px;
+}
+
+.table tfoot tr td:last-child
+{
+    -moz-border-radius: 0 0 9px 0;
+    -webkit-border-radius: 0 0 9px 0;
+    border-radius: 0 0 9px 0;
+}
+
+.table tfoot tr td:only-child
+{
+    -moz-border-radius: 0 0 9px 9px;
+    -webkit-border-radius: 0 0 9px 9px;
+    border-radius: 0 0 9px 9px;
+}
+
+.table tbody tr:hover
+{
+    background-color: #eeeeee;
+}
+
+.sortable:hover
+{
+    cursor: pointer;
+}
+
+/* Styles for validation helpers */
+
+.field-validation-error
+{
+    color: #ff0000;
+}
+
+.field-validation-valid
+{
+    display: none;
+}
+
+input.input-validation-error
+{
+    border: 1px solid #ff0000;
+}
+
+input[type="checkbox"].input-validation-error
+{
+    border: 0 none;
+}
+
+.validation-summary-errors
+{
+    color: #ff0000;
+}
+
+.validation-summary-valid
+{
+    display: none;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px)
+{
+    .navbar-nav li a
+    {
+        line-height: 40px;
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px)
+{
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px)
+{
+}

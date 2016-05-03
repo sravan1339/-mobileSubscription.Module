@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mobile Subscription" />
+    <title>@ViewBag.Title - Mobile Subscription - Purus Digital</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    @Html.Partial("_Header")
+
+    <div class="container body-content">
+        @RenderBody()
+        @Html.Partial("_Footer")
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <script type="text/javascript">
+        (function (MobileSubscription, $, undefined) {
+            MobileSubscription.getRootUrl = function () {
+                var rootUrl = "@Request.ApplicationPath";
+                if (rootUrl == "/") { rootUrl = ""; }
+                return rootUrl;
+            };
+        }(window.MobileSubscription = window.MobileSubscription || {}, jQuery));
+    </script>
+
+    @Scripts.Render("~/bundles/website")
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

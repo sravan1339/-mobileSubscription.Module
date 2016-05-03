@@ -1,0 +1,38 @@
+﻿<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Menu</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="@Url.Action("Index", "Home")" class="navbar-brand">
+                <sub>Purus Digital</sub><br /><b>Mobile Subscription</b>
+            </a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Billing <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="@Url.Action("Manage", "Operators")">Manage Operators</a></li>
+                        <li><a href="@Url.Action("Add", "Operators")">Add Operators</a></li>
+                        <li><a href="#">Manage Providers</a></li>
+                        <li><a href="#">Assign Providers</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Add New Products</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Customers</a></li>
+                <li><a href="#">Suppliers</a></li>
+                <li><a href="#">Reports</a></li>
+                <li><a href="#">Admin</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
