@@ -7,7 +7,7 @@ using System.Web.Optimization;
 using System.Web.Routing;
 using MobileSubscription.Website.App_Start;
 
-namespace MobileSubscription
+namespace MobileSubscription.Website
 {
     public class MvcApplication : System.Web.HttpApplication
     {
