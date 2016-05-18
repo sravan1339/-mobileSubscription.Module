@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MobileSubscription.Models.ViewModels
+namespace MobileSubscription.Website.Models.ViewModels
 {
     public class OperatorsManagementViewModel
     {

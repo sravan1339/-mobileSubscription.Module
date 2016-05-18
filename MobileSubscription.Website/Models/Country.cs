@@ -1,6 +1,6 @@
-﻿namespace MobileSubscription.Models
+﻿namespace MobileSubscription.Website.Models
 {
-    public class Operator
+    public class Country
     {
         public int Id { get; set; }
         public string Name { get; set; }

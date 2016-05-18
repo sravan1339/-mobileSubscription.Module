@@ -4,10 +4,10 @@ using System.Globalization;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using MobileSubscription.Models;
-using MobileSubscription.Models.ViewModels;
+using MobileSubscription.Website.Models;
+using MobileSubscription.Website.Models.ViewModels;
 
-namespace MobileSubscription.Controllers
+namespace MobileSubscription.Website.Controllers
 {
     public class OperatorsController : Controller
     {

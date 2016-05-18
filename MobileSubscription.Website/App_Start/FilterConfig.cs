@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace MobileSubscription.App_Start
+namespace MobileSubscription.Website.App_Start
 {
     public class FilterConfig
     {

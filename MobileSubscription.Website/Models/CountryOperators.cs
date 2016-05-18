@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace MobileSubscription.Models
+namespace MobileSubscription.Website.Models
 {
     public class CountryOperators
     {

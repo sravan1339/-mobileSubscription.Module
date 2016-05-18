@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace MobileSubscription.Models.ViewModels
+namespace MobileSubscription.Website.Models.ViewModels
 {
     public class AddOperatorViewModel
     {
