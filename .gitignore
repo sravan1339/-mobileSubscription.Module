@@ -1,3 +1,4 @@
 packages/
 MobileSubscription.Website/bin/
 MobileSubscription.Website/obj/
+*.suo
